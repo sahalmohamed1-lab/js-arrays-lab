@@ -1,29 +1,31 @@
 // Write your code here
-let products = ["Laptop", "Phone", "Headphone", "Monitor" ]
+const products = ["Laptop", "Phone", "Headphone", "Monitor" ];
 
-function logFirstProduct() {
+function logFirstProduct(products) {
   console.log(products[0]);
 }
 console.log(products[0]);
 
-function addProduct() {
-  addProduct;
+function addProduct(products, productName) {
+  products.push(productName);
+  return products;
 }
-products.push("Earphone")
+products.push("Charger");
+console.log(products)
+
+function updateProductName(products, index, newName) {
+  products[index] = newName;
+  return products;
+}
+products[4] = "Earphones";
 console.log(products);
 
-function updateProductName(_index, _productName) {
-  updateProductName;
+function removeLastProduct(products) {
+  products.pop();
+  return products;
 }
-products[4] = "Charger"
+products.pop();
 console.log(products);
-
-function removeLastProduct() {
-  removeLastProduct;
-}
-products.pop()
-console.log(products);
-
 
 // Export the necessary parts for testing
 module.exports = {
