@@ -4,27 +4,28 @@ const products = ["Laptop", "Phone", "Headphone", "Monitor" ];
 function logFirstProduct(products) {
   console.log(products[0]);
 }
+logFirstProduct(products[0]);
 console.log(products[0]);
 
 function addProduct(products, productName) {
   products.push(productName);
   return products;
 }
-products.push("Charger");
-console.log(products)
+addProduct = products.push("Charger");
+console.log(products);
 
 function updateProductName(products, index, newName) {
   products[index] = newName;
   return products;
 }
-products[4] = "Earphones";
+updateProductName(products[4] = "Earphones");
 console.log(products);
 
 function removeLastProduct(products) {
   products.pop();
   return products;
 }
-products.pop();
+removeLastProduct(products);
 console.log(products);
 
 // Export the necessary parts for testing
