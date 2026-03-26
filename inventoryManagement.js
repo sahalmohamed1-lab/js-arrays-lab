@@ -1,5 +1,28 @@
 // Write your code here
+let products = ["Laptop", "Phone", "Headphone", "Monitor" ]
 
+function logFirstProduct() {
+  console.log(products[0]);
+}
+console.log(products[0]);
+
+function addProduct() {
+  addProduct;
+}
+products.push("Earphone")
+console.log(products);
+
+function updateProductName(_index, _productName) {
+  updateProductName;
+}
+products[4] = "Charger"
+console.log(products);
+
+function removeLastProduct() {
+  removeLastProduct;
+}
+products.pop()
+console.log(products);
 
 
 // Export the necessary parts for testing
