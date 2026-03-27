@@ -1,31 +1,36 @@
 // Write your code here
 const products = ["Laptop", "Phone", "Headphone", "Monitor" ];
 
-function logFirstProduct(products) {
-  console.log(products[0]);
+function logFirstProduct() {
+  if (products.length > 0) {
+    console.log(products[0]);
+  } else {
+    console.log("No products available.");
+  }
 }
-logFirstProduct(products[0]);
-console.log(products[0]);
-
-function addProduct(products, productName) {
+function addProduct(productName) {
   products.push(productName);
-  return products;
 }
-addProduct = products.push("Charger");
+addProduct("Tablet");
+console.log(products);
+function updateProductName(index, newName) {
+  if (index >= 0 && index < products.length) {
+    products[index] = newName;
+  } else {
+    console.log("Invalid product index.");
+  }
+}
+updateProductName(1, "Smartphone");
 console.log(products);
 
-function updateProductName(products, index, newName) {
-  products[index] = newName;
-  return products;
+function removeLastProduct() {
+  if (products.length > 0) {
+    products.pop();
+  } else {
+    console.log("No products to remove.");
+  }
 }
-updateProductName(products[4] = "Earphones");
-console.log(products);
-
-function removeLastProduct(products) {
-  products.pop();
-  return products;
-}
-removeLastProduct(products);
+removeLastProduct();
 console.log(products);
 
 // Export the necessary parts for testing
